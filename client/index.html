@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vegans - Babble</title>
+    <link rel="stylesheet" type="text/css" media="all" href="styles/style.css">
+</head>
+<body>
+<header class="Header">
+    <img alt="Babble" class="Header-img" src="images/babble.png">
+    <h1 class="Header-h1">Babble<span class="Header-h1-span">Talk freely.</span></h1>
+</header>
+<nav class="Nav"></nav>
+<main class="Main">
+    <h1 class="Main-header">Vegans</h1>
+    <dl class="Main-stats">
+        <dt class="Main-stats-clients">0</dt>
+        <dt class="Main-stats-messages">0</dt>
+        <dd class="Main-stats-terms">User and Messages count</dd>
+    </dl>
+    <ol class="Main-chatList"></ol>
+</main>
+<div class="Form-message">
+    <label for="textareaMsg" hidden>.</label><textarea id="textareaMsg" name="textareaMsg" class="Form-message-textarea"></textarea>
+    <button aria-label="Send" class="Form-message-submit"></button>
+</div>
+<div class="Register">
+    <div class="Register-form">
+        <h2 class="Register-form-header">Who are you?</h2>
+        <label for="registerName">Full Name:</label><input name="registerName" id="registerName" type="text" minlength="3" class="Register-form-fullname">
+        <label for="registerEmail">Email:</label><input name="registerEmail" id="registerEmail" type="email" class="Register-form-email">
+        <button class="Register-form-save" type="submit">Save</button>
+        <button class="Register-form-anon" type="button">Stay Anonymous</button>
+    </div>
+</div>
+<script src="scripts/main.js"></script>
+</body>
+</html>

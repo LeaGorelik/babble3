@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vegans - Babble</title>
+    <link rel="stylesheet" type="text/css" media="all" href="styles/style.css">
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+
+</head>
+<body>
+
+<header class="Header">
+    <img alt="Babble" class="Header-img" src="images/babble.png">
+    <h1 class="Header-h1">Babble<span class="Header-h1-span">Talk freely.</span></h1>
+</header>
+<nav class="Nav"></nav>
+<main class="Main">
+    <h1 class="Main-header">Vegans</h1>
+    <dl class="Main-stats">
+        <dt class="Main-stats-clients">0</dt>
+        <dt class="Main-stats-messages">0</dt>
+        <dd class="Main-stats-terms">User and Messages count</dd>
+    </dl>
+    <ol class="Main-chatList"></ol>
+</main>
+<div class="Form-message">
+    <label for="textareaMsg" hidden>.</label><textarea id="textareaMsg" name="textareaMsg" class="Form-message-textarea"></textarea>
+    <button aria-label="Send" class="Form-message-submit"></button>
+</div>
+<div class="Register">
+    <div class="Register-form">
+        <h2 class="Register-form-header">Who are you?</h2>
+        <label for="registerName">Full Name:</label><input name="registerName" id="registerName" type="text" minlength="3" class="Register-form-fullname">
+        <label for="registerEmail">Email:</label><input name="registerEmail" id="registerEmail" type="email" class="Register-form-email">
+        <button class="Register-form-save" type="submit">Save</button>
+        <button class="Register-form-anon" type="button">Stay Anonymous</button>
+    </div>
+</div>
+
+<div id="mocha"></div>
+
+<script src="http://chaijs.com/chai.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://sinonjs.org/releases/sinon.js"></script>
+<!-- <script type="text/javascript" src="http://sinonjs.org/releases/sinon-qunit-1.0.0.js"></script>  -->
+<script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+<script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+
+<script>mocha.setup('bdd')</script>
+<script src="test.js"></script>
+
+
+<style>
+    div#mocha{background:rgba(0,0,0,0.75); position:absolute; left:0; top:100px; padding:0; margin:0; color:white; width:100%; overflow-y:scroll; height:calc(100% - 100px); }
+    ul#mocha-stats{position:absolute; left:0; top:0; font-size:20px; }
+    #mocha-stats li{font-size:20px; }
+    #mocha-stats li{font-size:20px; }
+    #mocha-stats em{font-size:20px; color:white; }
+    #mocha-stats a{font-size:20px; color:white; }
+    ul#mocha-report{padding-top:20px; }
+    #mocha h1 a{font-size:18px; }
+    #mocha h1{font-size:30px; }
+    li.suite {
+        padding-top: 60px;
+    }
+    #mocha h2{font-size: 20px; }
+    #mocha h2>span{font-size:18px; }
+    #mocha h2>a{font-size:18px; }
+    #mocha .test pre.error{max-width:calc(100% - 81px); background:white; }
+    #mocha-stats .progress{background:white; border-radius:100%; height:40px;
+        width:40px; }
+    #mocha .suite .suite h1{font-size:25px; }
+    #mocha .test.fail pre{width:calc(100% - 81px); background:white; overflow:scroll; font-size:12px; position:relative; }
+    #mocha .test.fail pre code{font-size:12px; }
+    #mocha code span{font-size:12px; }
+    #mocha .test pre {  font-size: 12px;  background:white;  color:black;  width:calc(100% - 100px)  }
+    #mocha .test pre code{  font-size: 12px;  }
+    #mocha .test pre code span{  font-size: 12px;  }
+</style>
+
+<script src="scripts/main.js" onload="setTimeout(function(){ mocha.checkLeaks(); mocha.run(); }, 0 );"></script>
+</body>
+</html>

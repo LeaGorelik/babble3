@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "fs": "*",
+    "gravatar": "*",
+    "http": "*",
+    "mocha": "^4.0.1",
+    "uniqid": "*",
+    "url": "*"
+  },
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha test/server/test.js",
+    "start": "node server/main.js"
+  }
+}
